@@ -1,18 +1,22 @@
 <template>
-  <div id="app">
-    <router-link to="/developers">developers</router-link>
-    <router-view></router-view>
-  </div>
+  <div id = "app">
+  <b-navbar toggleable="lg" type="dark" variant="info">
+    <b-navbar-brand href="#">Kanban</b-navbar-brand>
+
+    <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+
+    <b-collapse id="nav-collapse" is-nav>
+      <b-navbar-nav>
+        <b-nav-item to="/tasks">Tasks</b-nav-item>
+        <b-nav-item to="/developers" >Developers</b-nav-item>
+        <b-nav-item to="/addTask" >Add task</b-nav-item>
+      </b-navbar-nav>
+    </b-collapse>
+  </b-navbar>
+
+  <router-view/>
+</div>
 </template>
-
-<script>
-
-export default {
-  name: 'App',
-  components: {
-  }
-}
-</script>
 
 <style>
 #app {

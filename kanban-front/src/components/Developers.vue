@@ -35,6 +35,7 @@ export default {
   created() {
     axios.get("http://localhost:8080/developers").then((result) => {
       this.developers = result.data
+      console.log(result.data)
           })
   }
 }
